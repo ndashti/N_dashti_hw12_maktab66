@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+  </head>
+  <body>
+    <div class="container ">
+      <h1>Register...</h1>
+      <form id="formSubmit" name="myform" action="/1/index.html"  onsubmit="return validateAllFields(event)">
+
+        <div class="row ">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+            required
+            onkeyup="validate(this, 'nameValidationMsg', 'First Name')"
+          />
+          <small id="nameValidationMsg" ></small>
+        </div>
+        
+        <div class="row">
+          <label for="lname">Last Name</label>
+          <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+          required
+          onkeyup="validate(this, 'lnameValidationMsg', 'Last Name')"
+          />
+          <small id="lnameValidationMsg" ></small>
+        </div>
+
+        <div class="row">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+
+        </div>
+
+        <div class="row">
+          <button class="btn"  value="Submit" >Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <p>Your information was successfully registered! </p>
+      </div>
+    </div>
+
+    <script src="./assets/main.js"></script>
+  </body>
+</html>

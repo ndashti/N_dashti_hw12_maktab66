@@ -1,0 +1,32 @@
+
+
+$primary-color:#DB7093;
+$second-primary:#FFB6C1;
+$myfont:"yekan";
+
+@mixin sample-mixin($x,$y,$pseudo:false) {
+    width: 100%;
+    padding-top: unquote( ( $y / $x ) + '%' );
+    background-color: $second-primary;
+}
+
+
+
+h1{
+    background-color: $primary-color;
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+div{
+    @include sample-mixin(5,100);
+
+}
+
+
+

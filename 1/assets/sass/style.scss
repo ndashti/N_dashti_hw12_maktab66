@@ -1,0 +1,112 @@
+$primary-color:rgb(80, 145, 80);
+$second-color:rgb(243, 240, 240);
+$warning-color:rgb(255, 0, 0);
+$line-color:rgb(129, 129, 129);
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $second-color;
+}
+.container{
+    display: flex;
+    flex-flow: column ;
+    width: 70vw;
+    margin: auto;
+    background-color: $second-color;
+    border: $line-color;
+    margin-top: 30px;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: $primary-color;
+    color: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(10, 168, 10);
+}
+
+label {
+    padding: 3px 3px 3px 0;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}           
+//--------------------Require input-------------------
+
+.text-danger{
+    color: $warning-color;
+    display: block;
+}
+
+.success{
+    border: 2px solid $primary-color !important;
+}
+.danger{
+    border: 2px solid $warning-color !important;
+
+}
+// -------------------Modal Style---------------------
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: $primary-color;
+    color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: $warning-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
